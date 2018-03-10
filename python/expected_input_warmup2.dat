@@ -1,0 +1,89 @@
+string_times('Hi', 2) → 'HiHi'	'HiHi'	OK
+string_times('Hi', 3) → 'HiHiHi'	'HiHiHi'	OK
+string_times('Hi', 1) → 'Hi'	'Hi'	OK
+string_times('Hi', 0) → ''	''	OK
+string_times('Hi', 5) → 'HiHiHiHiHi'	'HiHiHiHiHi'	OK
+string_times('Oh Boy!', 2) → 'Oh Boy!Oh Boy!'	'Oh Boy!Oh Boy!'	OK
+string_times('x', 4) → 'xxxx'	'xxxx'	OK
+string_times('', 4) → ''	''	OK
+string_times('code', 2) → 'codecode'	'codecode'	OK
+string_times('code', 3) → 'codecodecode'	'codecodecode'	OK
+front_times('Chocolate', 2) → 'ChoCho'	'ChoCho'	OK
+front_times('Chocolate', 3) → 'ChoChoCho'	'ChoChoCho'	OK
+front_times('Abc', 3) → 'AbcAbcAbc'	'AbcAbcAbc'	OK
+front_times('Ab', 4) → 'AbAbAbAb'	'AbAbAbAb'	OK
+front_times('A', 4) → 'AAAA'	'AAAA'	OK
+front_times('', 4) → ''	''	OK
+front_times('Abc', 0) → ''	''	OK
+string_bits('Hello') → 'Hlo'	'Hlo'	OK
+string_bits('Hi') → 'H'	'H'	OK
+string_bits('Heeololeo') → 'Hello'	'Hello'	OK
+string_bits('HiHiHi') → 'HHH'	'HHH'	OK
+string_bits('') → ''	''	OK
+string_bits('Greetings') → 'Getns'	'Getns'	OK
+string_bits('Chocoate') → 'Coot'	'Coot'	OK
+string_bits('pi') → 'p'	'p'	OK
+string_bits('Hello Kitten') → 'HloKte'	'HloKte'	OK
+string_bits('hxaxpxpxy') → 'happy'	'happy'	OK
+string_splosion('Code') → 'CCoCodCode'	'CCoCodCode'	OK
+string_splosion('abc') → 'aababc'	'aababc'	OK
+string_splosion('ab') → 'aab'	'aab'	OK
+string_splosion('x') → 'x'	'x'	OK
+string_splosion('fade') → 'ffafadfade'	'ffafadfade'	OK
+string_splosion('There') → 'TThTheTherThere'	'TThTheTherThere'	OK
+string_splosion('Kitten') → 'KKiKitKittKitteKitten'	'KKiKitKittKitteKitten'	OK
+string_splosion('Bye') → 'BByBye'	'BByBye'	OK
+string_splosion('Good') → 'GGoGooGood'	'GGoGooGood'	OK
+string_splosion('Bad') → 'BBaBad'	'BBaBad'	OK
+last2('hixxhi') → 1	1	OK
+last2('xaxxaxaxx') → 1	1	OK
+last2('axxxaaxx') → 2	2	OK
+last2('xxaxxaxxaxx') → 3	3	OK
+last2('xaxaxaxx') → 0	0	OK
+last2('xxxx') → 2	2	OK
+last2('13121312') → 1	1	OK
+last2('11212') → 1	1	OK
+last2('13121311') → 0	0	OK
+last2('1717171') → 2	2	OK
+last2('hi') → 0	0	OK
+last2('h') → 0	0	OK
+last2('') → 0	0	OK
+array_count9([1, 2, 9]) → 1	1	OK
+array_count9([1, 9, 9]) → 2	2	OK
+array_count9([1, 9, 9, 3, 9]) → 3	3	OK
+array_count9([1, 2, 3]) → 0	0	OK
+array_count9([]) → 0	0	OK
+array_count9([4, 2, 4, 3, 1]) → 0	0	OK
+array_count9([9, 2, 4, 3, 1]) → 1	1	OK
+array_front9([1, 2, 9, 3, 4]) → True	True	OK
+array_front9([1, 2, 3, 4, 9]) → False	False	OK
+array_front9([1, 2, 3, 4, 5]) → False	False	OK
+array_front9([9, 2, 3]) → True	True	OK
+array_front9([1, 9, 9]) → True	True	OK
+array_front9([1, 2, 3]) → False	False	OK
+array_front9([1, 9]) → True	True	OK
+array_front9([5, 5]) → False	False	OK
+array_front9([2]) → False	False	OK
+array_front9([9]) → True	True	OK
+array_front9([]) → False	False	OK
+array_front9([3, 9, 2, 3, 3]) → True	True	OK
+array123([1, 1, 2, 3, 1]) → True	True	OK
+array123([1, 1, 2, 4, 1]) → False	False	OK
+array123([1, 1, 2, 1, 2, 3]) → True	True	OK
+array123([1, 1, 2, 1, 2, 1]) → False	False	OK
+array123([1, 2, 3, 1, 2, 3]) → True	True	OK
+array123([1, 2, 3]) → True	True	OK
+array123([1, 1, 1]) → False	False	OK
+array123([1, 2]) → False	False	OK
+array123([1]) → False	False	OK
+array123([]) → False	False	OK
+string_match('xxcaazz', 'xxbaaz') → 3	3	OK
+string_match('abc', 'abc') → 2	2	OK
+string_match('abc', 'axc') → 0	0	OK
+string_match('hello', 'he') → 1	1	OK
+string_match('he', 'hello') → 1	1	OK
+string_match('h', 'hello') → 0	0	OK
+string_match('', 'hello') → 0	0	OK
+string_match('aabbccdd', 'abbbxxd') → 1	1	OK
+string_match('aaxxaaxx', 'iaxxai') → 3	3	OK
+string_match('iaxxai', 'aaxxaaxx') → 3	3	OK
